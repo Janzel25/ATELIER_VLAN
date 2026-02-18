@@ -186,8 +186,11 @@ Changer VLAN 10 en :
 ```
 
 Questions :
-- Combien d’hôtes max ?  
-- Quelle plage IP valide ?  
+- Combien d’hôtes max ?
+2^7 = 128 adresses au total
+- 2 (adresse réseau + broadcast) = 126 adresses utilisables
+  
+- Quelle plage IP valide ? La plage valide va de 192.168.10.1 à 192.168.10.126 (on ne compte pas l'addresse réseau et broadcast)
 - Peut-on encore communiquer avec VLAN 20 ?
 
 ---
