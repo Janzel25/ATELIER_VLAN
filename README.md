@@ -170,10 +170,10 @@ PC1 → PC3
 
 # ❓ Questions de réflexion
 
-1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md 
-2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md  
-3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
-4. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
+1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> PC1 ne voit pas PC3 sans routeur car ils sont dans deux VLAN différents, donc dans deux domaines de broadcast distincts. 
+2. Quel rôle joue le masque /24 ? -> Le masque /24 indique les 24 premiers bits qui représentent la partie réseau et les 8 derniers bits représentent la partie hôte.
+3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Le routeur ne peut pas router entre deux réseaux ayant la même adresse IP, les sous-interfaces g0/0.10 et g0/0.20 auraient un conflit d’adressage, les PC ne sauraient pas vers quelle passerelle envoyer le trafic.
+4. Pourquoi un trunk est-il nécessaire ? -> le trunk est nécessaire pour transporter plusieurs VLAN simultanément et utiliser l'encapsulation.
 
 ---
 
